@@ -12,18 +12,22 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation (Layout 2: Menu di Tengah & Minimalis) -->
   <header class="header">
     <div class="nav-container">
       <a href="#home" class="logo">
-        <span class="logo-symbol">&lt;/&gt;</span>
+        <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <!-- Parabola Dish -->
+          <path d="M4 10a7.31 7.31 0 0 0 10 10Z"/>
+          <!-- Subreflector / Feed horn -->
+          <path d="m9 15 3-3"/>
+          <!-- Signal Waves -->
+          <path d="M17 13a6 6 0 0 0-6-6"/>
+          <path d="M21 13A10 10 0 0 0 11 3"/>
+        </svg>
         <span class="logo-text">Telecom.Eng</span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigasi">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
       <nav class="nav-menu" id="navMenu">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -31,8 +35,16 @@
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#education" class="nav-link">Education</a>
-        <a href="#contact" class="nav-link btn-contact-nav">Contact</a>
       </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-contact-nav">Contact</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -41,14 +53,14 @@
     <div class="container hero-content">
       <div class="hero-badge">Telecom & Hardware Engineering</div>
       <h1 class="hero-title">
-        Telecommunication Engineer
-        <span class="highlight-text">RF & Communication Systems</span>
+        Muhammad Nasrul Abidin
+        <span class="hero-personal-headline">Telecommunication Engineer | Hardware Prototyping, Network Testing &amp; Embedded Systems</span>
       </h1>
       <p class="hero-tagline">
         Menghubungkan perancangan rangkaian, sistem mikrokontroler, dan infrastruktur jaringan menjadi solusi fungsional.
       </p>
       <p class="hero-description">
-        Lulusan D3 Teknik Telekomunikasi dengan fokus pada Radio Frekuensi, sistem telekomunikasi, dan perancangan sistem elektronika. Berpengalaman dalam perancangan simulasi rangkaian, perakitan purwarupa hardware mikrokontroler, dan pengujian jaringan.
+        Mahasiswa D3 Teknik Telekomunikasi di Politeknik Elektronika Negeri Surabaya (PENS) dengan fokus pada Radio Frekuensi, sistem telekomunikasi, dan perancangan sistem elektronika. Berpengalaman dalam perancangan simulasi rangkaian, perakitan purwarupa hardware mikrokontroler, dan pengujian jaringan.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">Lihat Portofolio Proyek</a>
@@ -66,23 +78,27 @@
       </div>
       <div class="about-card">
         <p class="about-text">
-          Saya adalah lulusan <strong>D3 Teknik Telekomunikasi</strong> yang memiliki minat mendalam pada <strong>Radio Frekuensi (RF)</strong>, sistem telekomunikasi, dan perancangan sistem elektronika. Selama masa studi dan pengerjaan proyek, saya terbiasa menerjemahkan konsep teoritis ke dalam implementasi fisik—mulai dari perancangan simulasi skematik, perakitan purwarupa sirkuit hardware, hingga pemrograman mikrokontroler dan pengembangan aplikasi.
+          Saya adalah mahasiswa aktif Semester 3 D3 Teknik Telekomunikasi di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong> dengan minat mendalam pada <strong>Radio Frekuensi (RF)</strong>, sistem telekomunikasi, dan perancangan perangkat elektronika. Selama masa studi dan pengerjaan proyek, saya terbiasa menerjemahkan konsep teoritis ke dalam implementasi fisik—mulai dari perancangan simulasi skematik, perakitan purwarupa sirkuit hardware, hingga pemrograman mikrokontroler dan pengembangan aplikasi.
         </p>
         <p class="about-text">
           Dalam praktiknya, saya menggunakan software perancangan dan simulasi seperti <strong>NI Multisim</strong> dan <strong>Proteus</strong>, mikrokontroler <strong>Arduino Mega</strong>, serta bahasa pemrograman seperti <strong>C/C++, Java, dan Python</strong>. Saya senang menganalisis dan memecahkan masalah praktis pada level perangkat keras maupun jaringan, seperti memvalidasi kontinuitas pin koneksi fisik, merancang sistem pemantauan berbasis sensor, dan memastikan stabilitas tegangan pada sirkuit catu daya.
         </p>
         <div class="about-highlights">
           <div class="highlight-item">
+            <span class="highlight-label">Nama Lengkap</span>
+            <span class="highlight-val">Muhammad Nasrul Abidin</span>
+          </div>
+          <div class="highlight-item">
             <span class="highlight-label">Target Role</span>
             <span class="highlight-val">Electrical Engineer / Telecommunication Engineer</span>
           </div>
           <div class="highlight-item">
             <span class="highlight-label">Pendidikan</span>
-            <span class="highlight-val">D3 Teknik Telekomunikasi</span>
+            <span class="highlight-val">D3 Teknik Telekomunikasi - PENS</span>
           </div>
           <div class="highlight-item">
-            <span class="highlight-label">Fokus Utama</span>
-            <span class="highlight-val">RF, Sistem Telekomunikasi, Embedded Hardware</span>
+            <span class="highlight-label">Status</span>
+            <span class="highlight-val">Semester 3 (Aktif)</span>
           </div>
         </div>
       </div>
@@ -214,7 +230,10 @@
             <span class="tech-tag">Hardware Assembly</span>
           </div>
           <div class="project-links">
-            <span class="repo-placeholder">GitHub / Demo: [Belum diisi]</span>
+            <a href="#" class="btn-project-link disabled" aria-disabled="true" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Dokumentasi Segera Hadir
+            </a>
           </div>
         </article>
 
@@ -252,7 +271,10 @@
             <span class="tech-tag">Rangkaian Analog</span>
           </div>
           <div class="project-links">
-            <span class="repo-placeholder">GitHub / Demo: [Belum diisi]</span>
+            <a href="#" class="btn-project-link disabled" aria-disabled="true" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Dokumentasi Segera Hadir
+            </a>
           </div>
         </article>
 
@@ -290,7 +312,10 @@
             <span class="tech-tag">Circuit Simulation</span>
           </div>
           <div class="project-links">
-            <span class="repo-placeholder">GitHub / Demo: [Belum diisi]</span>
+            <a href="#" class="btn-project-link disabled" aria-disabled="true" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Dokumentasi Segera Hadir
+            </a>
           </div>
         </article>
 
@@ -328,7 +353,10 @@
             <span class="tech-tag">Hardware Wiring</span>
           </div>
           <div class="project-links">
-            <span class="repo-placeholder">GitHub / Demo: [Belum diisi]</span>
+            <a href="#" class="btn-project-link disabled" aria-disabled="true" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Dokumentasi Segera Hadir
+            </a>
           </div>
         </article>
 
@@ -366,7 +394,10 @@
             <span class="tech-tag">Mobile Application</span>
           </div>
           <div class="project-links">
-            <span class="repo-placeholder">GitHub / Demo: [Belum diisi]</span>
+            <a href="#" class="btn-project-link disabled" aria-disabled="true" onclick="return false;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              Dokumentasi Segera Hadir
+            </a>
           </div>
         </article>
       </div>
@@ -401,11 +432,14 @@
         <div class="timeline-block" id="education">
           <h3 class="timeline-heading">Pendidikan</h3>
           <div class="timeline-card">
-            <div class="timeline-meta">[Tahun Kelulusan: Belum diisi]</div>
+            <div class="timeline-meta">2025 — Sekarang (Mahasiswa Aktif • Semester 3)</div>
             <h4 class="timeline-role">D3 Teknik Telekomunikasi</h4>
-            <p class="timeline-sub">[Nama Institusi / Perguruan Tinggi: Belum diisi]</p>
+            <p class="timeline-institution">
+              <span class="institution-name">Politeknik Elektronika Negeri Surabaya</span>
+              <span class="institution-badge">PENS</span>
+            </p>
             <p class="timeline-notes">
-              Fokus kajian: Sistem Telekomunikasi, Radio Frekuensi (RF), Jaringan Komunikasi & Infrastruktur, Rangkaian Elektronika, dan Sistem Mikrokontroler.
+              Fokus kajian: Sistem Telekomunikasi, Radio Frekuensi (RF), Jaringan Komunikasi &amp; Infrastruktur, Rangkaian Elektronika, dan Sistem Mikrokontroler.
             </p>
           </div>
         </div>
@@ -426,31 +460,31 @@
         </div>
 
         <div class="contact-info-grid">
-          <div class="info-item">
+          <a href="mailto:abidinnasrul349@gmail.com" class="info-item info-link">
             <span class="info-icon">📧</span>
             <span class="info-title">Email</span>
-            <span class="info-content">[Email belum diisi]</span>
-          </div>
-          <div class="info-item">
+            <span class="info-content">abidinnasrul349@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-nasrul-abidin-17105a391/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="info-item info-link">
             <span class="info-icon">💼</span>
             <span class="info-title">LinkedIn</span>
-            <span class="info-content">[LinkedIn belum diisi]</span>
-          </div>
-          <div class="info-item">
+            <span class="info-content">Muhammad Nasrul Abidin</span>
+          </a>
+          <a href="https://github.com/bitzz-afk" target="_blank" rel="noopener noreferrer" class="info-item info-link">
             <span class="info-icon">🐙</span>
             <span class="info-title">GitHub</span>
-            <span class="info-content">[GitHub belum diisi]</span>
-          </div>
+            <span class="info-content">github.com/bitzz-afk</span>
+          </a>
           <div class="info-item">
             <span class="info-icon">📍</span>
             <span class="info-title">Domisili</span>
-            <span class="info-content">Jombang / Jawa Timur, Indonesia</span>
+            <span class="info-content">Surabaya, Jawa Timur, Indonesia</span>
           </div>
         </div>
 
         <div class="contact-action-box">
           <p>Butuh salinan Curriculum Vitae (CV) atau ingin mendiskusikan kualifikasi saya lebih lanjut?</p>
-          <a href="mailto:placeholder@email.com" class="btn btn-primary">Kirim Pesan Email</a>
+          <a href="mailto:abidinnasrul349@gmail.com" class="btn btn-primary">Kirim Pesan Email</a>
         </div>
       </div>
     </div>
