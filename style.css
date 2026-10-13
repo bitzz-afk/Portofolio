@@ -274,8 +274,107 @@ body {
 
 .hero-content {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1 1 58%;
+  max-width: 680px;
+}
+
+/* Hero Profile Image Component */
+.hero-image-wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-card {
+  position: relative;
+  width: 256px;   /* setara w-64 */
+  height: 320px;  /* setara h-80 (rasio potret bersih) */
+  background: #ffffff;
+  border: 1px solid #e5e7eb; /* Border tipis abu-abu sangat muda */
+  border-radius: 1rem;       /* rounded-2xl */
+  padding: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm minimalis */
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.hero-image-card.rounded-2xl {
+  border-radius: 1rem; /* 16px, sudut melengkung halus */
+}
+
+.hero-image-card.rounded-xl {
+  border-radius: 0.75rem; /* 12px */
+}
+
+.hero-image-card:hover {
+  transform: translateY(-3px);
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0.75rem; /* rounded-xl pada foto di dalam bingkai */
+  display: block;
+}
+
+.hero-profile-img.rounded-2xl {
+  border-radius: 0.75rem;
+}
+
+.hero-image-status {
+  position: absolute;
+  bottom: -14px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 50px;
+  padding: 0.35rem 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981; /* Green status dot */
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  animation: pulse-green 2s infinite ease-in-out;
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.75;
+  }
+}
+
+.status-text {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 .hero-badge {
@@ -598,34 +697,40 @@ body {
 }
 
 .project-links {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .btn-project-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.8125rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.84rem;
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   border-radius: var(--radius-sm);
+  background-color: #ffffff;
+  color: var(--accent-navy);
+  border: 1.5px solid var(--accent-navy);
+  box-shadow: 0 1px 3px rgba(30, 58, 138, 0.08);
   transition: var(--transition);
 }
 
-.btn-project-link.disabled {
-  background-color: #f1f5f9;
-  color: #64748b;
-  border: 1px dashed #cbd5e1;
-  opacity: 0.75;
-  cursor: not-allowed;
-  pointer-events: none;
-  user-select: none;
+.btn-project-link:hover {
+  background-color: var(--accent-navy);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
 }
 
-.btn-project-link.disabled svg {
-  opacity: 0.65;
+.btn-project-link svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn-project-link:hover svg:last-child {
+  transform: translate(2px, -2px);
 }
 
 /* --- 9. Experience & Education Timeline --- */
@@ -841,6 +946,15 @@ body {
 
 /* --- Tablet / Medium Devices (<= 992px) --- */
 @media screen and (max-width: 992px) {
+  .hero-content {
+    gap: 2rem;
+  }
+
+  .hero-image-card {
+    width: 224px;   /* setara w-56 */
+    height: 288px;  /* setara h-72 */
+  }
+
   .hero-title {
     font-size: 2.35rem;
   }
@@ -929,10 +1043,33 @@ body {
     display: none; /* diakses lewat drawer atau hero CTA */
   }
 
-  /* Hero Section Adjustment */
+  /* Hero Section Mobile Adjustment */
   .hero-section {
     padding: 6.5rem 0 3.5rem 0;
     min-height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse; /* Foto tampil di atas atau tepat di atas teks */
+    align-items: center;
+    text-align: center;
+    gap: 2.25rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+  }
+
+  .hero-image-card {
+    width: 224px;   /* setara w-56 */
+    height: 288px;  /* setara h-72 */
   }
 
   .hero-title {
@@ -945,10 +1082,15 @@ body {
 
   .hero-tagline {
     font-size: 1.05rem;
+    border-left: none;
+    border-top: 2px solid var(--accent-navy);
+    padding-left: 0;
+    padding-top: 0.75rem;
   }
 
   .hero-actions {
     width: 100%;
+    justify-content: center;
   }
 
   .hero-actions .btn {
@@ -981,6 +1123,11 @@ body {
 
   .container {
     padding: 0 1rem;
+  }
+
+  .hero-image-card {
+    width: 192px;   /* setara w-48 */
+    height: 256px;  /* setara h-64 */
   }
 
   .hero-title {
